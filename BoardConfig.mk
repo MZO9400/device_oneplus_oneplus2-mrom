@@ -200,6 +200,14 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
+# TWRP
+TW_THEME := portrait_hdpi
+BOARD_HAS_NO_REAL_SDCARD := true
+TARGET_RECOVERY_QCOM_RTC_FIX := true
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TW_DEFAULT_LANGUAGE := en-US
+TW_EXTRA_LANGUAGES := true
+TW_INCLUDE_CRYPTO := true
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
