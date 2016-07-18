@@ -1,0 +1,14 @@
+/boot       emmc   /dev/block/mmcblk0p35
+/recovery   emmc   /dev/block/mmcblk0p36
+/system     ext4   /dev/block/mmcblk0p42
+/data       ext4   /dev/block/mmcblk0p43	flags=encryptable=footer;length=-16384
+/data       f2fs   /dev/block/mmcblk0p43
+/cache      ext4   /dev/block/mmcblk0p41
+/cache      f2fs   /dev/block/mmcblk0p41
+/persist	ext4	/dev/block/mmcblk0p37
+/firmware   vfat   /dev/block/mmcblk0p1	flags=mounttodecrypt;fsflags=ro
+/misc	emmc	/dev/block/mmcblk0p38
+/devinfo	emmc	/dev/block/mmcblk0p9
+/oem_stanvbk	emmc	/dev/block/mmcblk0p20	flags=backup=1;display="EFS"
+
+/usb_otg		vfat	/dev/block/sda1 	/dev/block/sda		flags=display="USB-OTG";storage;wipeingui;removable
