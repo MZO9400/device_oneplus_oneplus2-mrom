@@ -199,10 +199,10 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Crypto
-TARGET_HW_DISK_ENCRYPTION := true
+TARGET_HW_DISK_ENCRYPTION := false
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
+#TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
 # TWRP
 TW_THEME := portrait_hdpi
 BOARD_HAS_NO_REAL_SDCARD := true
@@ -242,8 +242,7 @@ MR_DEVICE_SPECIFIC_VERSION := b
 
 #Force populating /dev/block/platform/msm_sdcc.1/by-name
 #from the emmc
-MR_POPULATE_BY_NAME_PATH := "/dev/block/platform/soc.0/f9824900.sdhci/by-name"
-
+#MR_POPULATE_BY_NAME_PATH := "/dev/block/platform/soc.0/f9824900.sdhci/by-name"
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
