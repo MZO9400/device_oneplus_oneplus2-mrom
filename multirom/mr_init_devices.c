@@ -40,12 +40,16 @@ const char *mr_init_devices[] =
 
     // for input
     "/sys/devices/virtual/input*",
+    "/sys/devices/virtual/misc/uinput",
     "/sys/module/uinput",
     "/sys/class/input*",
     "/sys/devices/soc.0/gpio_keys.81/input*",
     "/sys/devices/soc.0/gpio_keys.81/input/input4",
+    // soft i2c
     "/sys/devices/soc.0/f9924000.i2c/i2c-2/2-0020/input*",
     "/sys/devices/soc.0/f9924000.i2c/i2c-2/2-0020/input/input6",
+    "/sys/devices/soc.0/f9928000.i2c/i2c-6/6-0020/input*",
+    "/sys/devices/soc.0/f9928000.i2c/i2c-6/6-0020/input/input5",
 
     // for adb
     "/sys/class/android_usb/android0*",
