@@ -211,7 +211,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_HW_DISK_ENCRYPTION := false
 
 # Recovery
-#TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
 # TWRP
 TW_THEME := portrait_hdpi
 BOARD_HAS_NO_REAL_SDCARD := true
@@ -233,7 +233,7 @@ MR_DPI_FONT := 340
 MR_USE_MROM_FSTAB := true
 MR_FSTAB := device/oneplus/oneplus2/multirom/mrom.fstab
 MR_INPUT_TYPE := type_b
-MR_INIT_DEVICES := device/oneplus/oneplus2/multirom/mr_init_devices.c
+MR_INIT_DEVICES := $(PLATFORM_PATH)/multirom/mr_init_devices.c
 MR_KEXEC_MEM_MIN := 0x1fd00000
 MR_KEXEC_DTB := true
 MR_DEVICE_HOOKS := $(PLATFORM_PATH)/multirom/mr_hooks.c
