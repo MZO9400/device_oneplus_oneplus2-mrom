@@ -12,8 +12,6 @@ const char *mr_init_devices[] =
     "/sys/devices/virtual/misc/fuse",
 
     "/sys/class/graphics/fb0",
-    "/sys/devices/virtual/graphics/fb1",
-
 
     "/sys/block/mmcblk0",
     "/sys/devices/soc.0/f9824900.sdhci",
@@ -46,7 +44,8 @@ const char *mr_init_devices[] =
     "/sys/class/input*",
     "/sys/devices/soc.0/gpio_keys.81/input*",
     "/sys/devices/soc.0/gpio_keys.81/input/input4",
-    //"/sys/devices/soc.0/f9924000.i2c/i2c-2/2-0020/input/input6",
+    "/sys/devices/soc.0/f9924000.i2c/i2c-2/2-0020/input*",
+    "/sys/devices/soc.0/f9924000.i2c/i2c-2/2-0020/input/input6",
 
     // for adb
     "/sys/class/android_usb/android0*",
