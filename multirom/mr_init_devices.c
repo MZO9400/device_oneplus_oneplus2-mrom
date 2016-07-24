@@ -20,6 +20,7 @@ const char *mr_init_devices[] =
     "/sys/devices/soc.0/f9824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0",
     "/sys/devices/soc.0/f9824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p1", //modem
     "/sys/devices/soc.0/f9824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p9", //devinfo
+    "/sys/devices/soc.0/f9824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p19", //efs
     "/sys/devices/soc.0/f9824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p20", //efs
     "/sys/devices/soc.0/f9824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p35", //boot
     "/sys/devices/soc.0/f9824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p36", //recovery
@@ -57,12 +58,16 @@ const char *mr_init_devices[] =
     "/sys/bus/usb",
 
     // USB Drive
-    "/sys/devices/virtual/android_usb/android0",
+    "/sys/devices/soc.0/f9200000.ssusb/f9200000.dwc3/xhci-hcd*",
     "/sys/bus/platform/drivers/xhci-hcd*",
     "/sys/block/sda/sda1",
 
     // for qualcomm overlay - /dev/ion
     "/sys/devices/virtual/misc/ion",
+
+    // Encryption
+    "/sys/devices/virtual/misc/device-mapper",
+    "/sys/devices/virtual/qseecom/qseecom",
 
     NULL
 };
