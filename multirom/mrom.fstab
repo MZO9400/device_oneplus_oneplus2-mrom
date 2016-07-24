@@ -1,6 +1,6 @@
-/modem	vfat	/dev/block/mmcblk0p1
+/firmware	vfat	/dev/block/mmcblk0p1	flags=mounttodecrypt;fsflags=ro
 /boot	emmc	/dev/block/mmcblk0p35
-/recovery	emmc	/dev/block/mmcblk0p36
+/recovery	emmc	/dev/block/mmcblk0p36	flags=backup=1
 /misc	emmc	/dev/block/mmcblk0p38
 /persist	ext4	/dev/block/mmcblk0p37
 
@@ -10,4 +10,6 @@
 /cache	ext4	/dev/block/mmcblk0p41
 /cache	f2fs	/dev/block/mmcblk0p41
 
-/usb_otg	vfat	/dev/block/sda1	/dev/block/sda	flags=display="USB-OTG";storage;wipeingui;removable
+/oem_dycnvbk	emmc	/dev/block/mmcblk0p19	flags=backup=1;display="EFS"
+/oem_stanvbk    emmc	/dev/block/oem_stanvbk	flags=backup=1;display="EFS"
+/usbstorage     vfat	/dev/block/sda1         /dev/block/sda          flags=fsflags=utf8;display="USB Storage";storage;removable
