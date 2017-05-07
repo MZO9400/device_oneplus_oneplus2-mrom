@@ -228,7 +228,7 @@ TW_EXTRA_LANGUAGES := true
 TW_INCLUDE_CRYPTO := true
 TWHAVE_SELINUX := true
 TW_TARGET_USES_QCOM_BSP := true
-
+TW_NEW_ION_HEAP := true
 
 # MR config. MultiROM also uses parts of TWRP config
 TARGET_RECOVERY_IS_MULTIROM := true
