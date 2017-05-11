@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 [ 
   {
     "remote": "omnirom",
@@ -71,7 +70,4 @@
     "target_path": "kernel/oneplus/msm8994",
     "revision": "android-7.1"
   }
-=======
-[
->>>>>>> 2aec8db... More device compattibility
 ]

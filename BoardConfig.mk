@@ -50,7 +50,7 @@ TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv7-a-neon
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := cortex-a53
+TARGET_2ND_CPU_VARIANT := cortex-a53.a57
 
 TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 TARGET_USES_64_BIT_BINDER := true
@@ -214,7 +214,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_HW_DISK_ENCRYPTION := true
 
 # Recovery
-#TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
+#TARGET_RECOVERY_FSTAB := $(BOARD_PATH)/rootdir/etc/fstab.qcom
 # TWRP
 TW_THEME := portrait_hdpi
 BOARD_HAS_NO_REAL_SDCARD := true
@@ -229,6 +229,7 @@ TW_INCLUDE_CRYPTO := true
 TWHAVE_SELINUX := true
 TW_TARGET_USES_QCOM_BSP := true
 TW_NEW_ION_HEAP := true
+WITH_TWRP=true
 
 # MR config. MultiROM also uses parts of TWRP config
 TARGET_RECOVERY_IS_MULTIROM := true
@@ -238,14 +239,14 @@ MR_DPI_FONT := 340
 MR_USE_MROM_FSTAB := true
 MR_FSTAB := device/oneplus/oneplus2/multirom/mrom.fstab
 MR_INPUT_TYPE := type_b
-MR_INIT_DEVICES := $(PLATFORM_PATH)/multirom/mr_init_devices.c
+MR_INIT_DEVICES := $(BOARD_PATH)/multirom/mr_init_devices.c
 MR_KEXEC_MEM_MIN := 0x1fd00000
 MR_KEXEC_DTB := true
-MR_DEVICE_HOOKS := $(PLATFORM_PATH)/multirom/mr_hooks.c
+MR_DEVICE_HOOKS := $(BOARD_PATH)/multirom/mr_hooks.c
 MR_DEVICE_HOOKS_VER := 4
 MR_DEVICE_VARIANTS := OnePlus2 oneplus2 Oneplus2 onePlus2
 MR_USE_QCOM_OVERLAY := true
-MR_QCOM_OVERLAY_HEADER := $(PLATFORM_PATH)/multirom/mr_qcom_overlay.h
+MR_QCOM_OVERLAY_HEADER := $(BOARD_PATH)/multirom/mr_qcom_overlay.h
 MR_QCOM_OVERLAY_CUSTOM_PIXEL_FORMAT := MDP_RGBX_8888
 NEW_ION_HEAP := true
 MR_QCOM_OVERLAY_HEAP_ID_MASK := 1
@@ -256,7 +257,7 @@ DEVICE_RESOLUTION := 1080x1920
 MR_PIXEL_FORMAT := "ABGR_8888"
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 # Versioning
-include $(PLATFORM_PATH)/multirom/MR_REC_VERSION.mk
+include $(BOARD_PATH)/multirom/MR_REC_VERSION.mk
 BOARD_MKBOOTIMG_ARGS += --board mrom$(MR_REC_VERSION)
 MR_REC_VERSION := $(shell date -u +%Y%m%d)-01
 MR_DEVICE_SPECIFIC_VERSION := b
